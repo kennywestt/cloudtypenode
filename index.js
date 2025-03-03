@@ -26,8 +26,9 @@ const corsOptions = {
         process.env.SERVICE_ADDRESS, // React 호스팅 주소
         "http://localhost:3000",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+    credentials: true,
 };
 
 app.use(cors(corsOptions));
